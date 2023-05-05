@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------git bash konsol temel komutlar (v2.40.1)------------------------------------------------------------------------
+
+clear : konsolu temizler
+
+pwd : hangi dosya yolunda old. gösterir
+
+cd .. : bir gerideki klasöre gider
+
+cd name : name adlı klasöre girer
+
+mkdir app : app adlı klasör oluşturur
+
+touch index.html : index.html adlı dosya oluşturur  
+
+ls : içinde bulunduğu klasörde hangi dosyalar old. gösterir
+
+-----------------------------------------------------------------------------------git komutları--------------------------------------------------------------------------------------------
+
+git config :
+	git config --global user.name "username"
+	git config --global user.email "user@gmail.com"
+
+git init : .git uzantılı gizli klasör oluşturur
+
+git status : yapılmış olan değişikler fakat storage area ya gönderilmeyen değişikikleri gösterir
+
+git add index.html : index.html dosyasını ekler
+
+git add . : toplu olarak storage area ya ekler
+
+git commit -m "commit 1" : dosyada yapılan değişiklikleri kaydeder
+
+git log : daha önce yapılan commitleri ve author notunu gösterir
+
+git checkout commitID -- . : commitID numaralı dosyayı en son commit versiyonu geri getirir
+
+git diff : en son güncellenen dosyanın içeriğini gösterir
+
+git reset HEAD index.html ve git checkout -- index.html : index.html de yapılan değişikliği storage area da geri alır
+
+git rm index.html : index.html adlı dosyayı kaldırır
+
+git rm -r test/ : test klasörünü siler
+
+git mv test.txt deneme.txt : text.txt adlı dosyayı deneme.txt olarak değiştirir
+
+git mv test.txt inc/ : test.txt dosyasını inc klasörüne taşır
+
+git config --global alias.st status : status fonks. adını st olarak değiştirir 
+
+git remote add origin https://github.com/moon/app.git : uzak sunucuda origin adlı bir klasör oluşturulur
+
+git push -u origin master : uzak sunucuya dosyalar iletilir
+
+git pull : başkaların yaptığı değişikliği indirir
+
+------------------------------------------------------------------------------------.gitignore----------------------------------------------------------------------------------------------
+
+touch .gitignore : .gitignore dosyası oluşturur bu dosya görülmesi istenmediği dosyaları ayarlar (txt formatındadır)
+
+------------------------------------------------------------------------------------branch kullanımı----------------------------------------------------------------------------------------
+
+git branch : localde branceleri gösterir
+
+git branch -all : uzak sunucu dahil branchleri gösterir
+
+git fetch : yeni oluşturulan bramch
+
+git branch dev : dev adlı yeni bir branch oluşturur
+
+git checkout dev : dev adlı branch e geçiş yapar
+
+git merge dev : dev branch deki dosyalar mevcut branch e geçerir
+
+git branch -D dev : dev adlı branch i siler
